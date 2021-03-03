@@ -20,7 +20,7 @@ function Homepage() {
         setLoading(false);
       }
     }
-    fetchPosts();
+    fetchRooms();
   }, []);
 
   return (
@@ -38,4 +38,4 @@ function Homepage() {
   );
 }
 
-export default HomePage;
+export default Homepage;

@@ -12,7 +12,7 @@ app.use(express.json());
 // Configurar nosso app para entender requisições do tipo URLEncoded (para envio de imagens)
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(cors({ origin: "http://localhost:3000/" }));
+app.use(cors({ origin: "http://localhost:3000" }));
 
 // Importar a configuração do banco de dados (mongoose)
 const db = require("./config/db.config.js");

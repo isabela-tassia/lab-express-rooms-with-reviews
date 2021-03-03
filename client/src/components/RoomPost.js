@@ -1,4 +1,5 @@
 function RoomPost(props) {
+  console.log(props.post);
   return (
     <div className="card border-0  mb-2" key={props.post._id}>
       <img
