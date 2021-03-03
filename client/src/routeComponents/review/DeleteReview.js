@@ -9,7 +9,9 @@ function DeleteRoom() {
   useEffect(() => {
     async function deleteRoom() {
       try {
-        const response = await axios.delete(`http://localhost:4000/room/${id}`);
+        const response = await axios.delete(
+          `http://localhost:4000/review/${id}`
+        );
 
         console.log(response);
 

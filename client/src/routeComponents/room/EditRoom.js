@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import RoomForm from "./RoomForm";
-import { useEffect } from "react";
 
 function EditRoom() {
   const [state, setState] = useState({

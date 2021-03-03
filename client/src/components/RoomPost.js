@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function RoomPost(props) {
   console.log(props.post);
   return (
@@ -9,7 +11,7 @@ function RoomPost(props) {
       />
       <div className="card-body">
         <div className="w-100">
-          <span>{props.post.name}</span>
+          <Link to={`/room/${props.post._id}`}>{props.post.name}</Link>
         </div>
         <p>{props.post.description}</p>
       </div>

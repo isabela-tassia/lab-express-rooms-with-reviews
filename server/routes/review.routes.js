@@ -7,12 +7,12 @@ const Room = require("../models/Room.model");
 // Crud (Create): Criar um novo review
 router.post("/room/:id/review", async (req, res) => {
   try {
-    const reviewParams = { ...req.body, roomId: req.params.id };
+    const reviewParams = { ...req.body };
     const newReview = await Review.create(reviewParams);
 
     const room = await Room.findOneAndUpdate(
       { _id: req.params.id },
-      { $set: { reviews: newReview._id } },
+      { $push: { reviews: newReview._id } },
       { new: true }
     );
 
